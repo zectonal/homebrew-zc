@@ -1,4 +1,4 @@
 This is a readme
 
-[!TIP]
+**Warning**
 Good to know!
