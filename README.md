@@ -16,7 +16,7 @@ A blazingly fast Data Observability command line diagnostic tool written in Rust
 
 # Connect with Us
 
-Zectheads unite! We love new features and feedback.
+Zectheads unite! We love to get new features and feedback.
 
 Email us at [support@zectonal.com](mailto:support@zectonal.com)
 
@@ -67,12 +67,12 @@ unzip zc_0.14.0_macos.zip
 
 # Configuration
 
-**zc** uses a TOML-formatted file for configuring data sources
-
 A **Configuration** is comprised of two items:
 
 1. [Environments](#environments)
 1. [Sources](#sources)
+
+> [!NOTE] >**zc** uses a TOML-formatted file for configuring data sources
 
 ### Environments
 
@@ -87,9 +87,11 @@ Environments contain information about the broader context of the data source an
 env_type = "posix"
 ```
 
-**note**: the `env_type` must be `posix`
+> [!IMPORTANT]
+> the `env_type` must be `posix`
 
-**note**: the `name` in this case is `my_posix_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
+> [!IMPORTANT]
+> the `name` in this case is `my_posix_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
 
 **AWS Environment**
 
@@ -99,9 +101,11 @@ env_type = "aws"
 credential_profile_name = "not-default"
 ```
 
-**note**: the `env_type` must be `aws`
+> [!IMPORTANT]
+> the `env_type` must be `aws`
 
-**note**: the `name` in this case is `my_aws_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
+> [!IMPORTANT]
+> the `name` in this case is `my_aws_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
 
 ### Sources
 
