@@ -4,7 +4,7 @@
 
 A blazingly fast Data Observability diagnostic tool that runs in your environment.
 
-View our [License](license/index.html)
+View our [License](license.md)
 
 &nbsp;
 
