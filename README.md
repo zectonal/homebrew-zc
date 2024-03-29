@@ -8,7 +8,7 @@ A blazingly fast Data Observability command line diagnostic tool written in Rust
 
 - blazingly fast and a companion to the flagship [Zectonal](https://www.zectonal.com) **Data Observability and Deep Data Inspection Platform<sup>(c)</sup>**.
 
-- perfect for providing a quick snapshot for observability information about your data sources
+- provides a quick snapshot for observability information about your data sources
 
 - perfect for iterating to generating an optimal [Configuration](#configuration) for the [Zectonal](https://www.zectonal.com) platform.
 
@@ -103,10 +103,9 @@ credential_profile_name = "not-default"
 ```
 
 > [!IMPORTANT]
-> the `env_type` must be `aws`
-
-> [!IMPORTANT]
-> the `name` in this case is `my_aws_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
+>
+> - the `env_type` must be `aws`
+> - the `name` in this case is `my_aws_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
 
 ### Sources
 
@@ -123,11 +122,14 @@ base_location = "fs:///Users/me/Downloads"
 poll_frequency = "1m"
 ```
 
-**note**: the default name for this Source is `Downloads`
+> [!NOTE]
+>
+> the default name for this Source is `Downloads`
 
-**note**: the `base_location` follows industry standard URI schemes and so for a Posix Source it must start with `fs://`
-
-**note**: the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
+> [!IMPORTANT]
+>
+> - the `base_location` follows industry standard URI schemes and so for a Posix Source it must start with `fs://`
+> - the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
 
 **AWS minimum configuration**
 
@@ -145,11 +147,14 @@ Further, the AWS confiuration supports an optional parameter called `sub_directo
 sub_directory = "output/"
 ```
 
-**note**: the default name for this Source is `zect_test`
+> [!NOTE]
+>
+> the default name for this Source is `zect_test`
 
-**note**: the `base_location` for an AWS S3 Source must start with `s3://` URI scheme.
-
-**note**: the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
+> [!IMPORTANT]
+>
+> - the `base_location` for an AWS S3 Source must start with `s3://` URI scheme.
+> - the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
 
 #### Extended Configuration
 
@@ -218,7 +223,7 @@ A growing number of command line options are available to customize the behavior
 
 In the absence of a configuration file, either explicitly via `--configuration-file <FILE>` flag or implicitly via the default location `$XDG_HOME/.config/zect/config.toml`, `zc` will default to using both `$HOME/Downloads` and `$HOME/Documents`.
 
-```sh
+```bash
 zc --configuration-file <path to TOML config file>
 ```
 
