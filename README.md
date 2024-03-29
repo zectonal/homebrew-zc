@@ -14,7 +14,7 @@ A blazingly fast Data Observability command line diagnostic tool written in Rust
 
 - only runs in your environment
 
-> We believe that your data and observability metrics in someone else's SaaS platform or Cloud is for their benefit and not yours
+> Data observability metrics in someone else's SaaS platform or Cloud is for their benefit and not yours
 
 # Connect with Us
 
@@ -37,13 +37,22 @@ View our [License](license.md)
 
 # Installation
 
-#### macOS (brew)
+#### macos (brew) install (recommended)
 
-```sh
-brew tap zectonal/zc/zc
+```bash
+brew tap zectonal/zc
+brew update
+brew install zc
 ```
 
-#### macOS (manual)
+#### macos (brew) uninstall (recommended)
+
+```bash
+brew remove zc
+brew untap zectonal/zc
+```
+
+#### macOS (manual) installation
 
 1. Download [**zc_0.14.0_macos.zip**](http://zectonal-releases.s3-website-us-east-1.amazonaws.com/zc/releases/download/v0.14.0/zc_0.14.0_macos.zip)
 
