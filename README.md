@@ -6,21 +6,25 @@ A blazingly fast Data Observability command line diagnostic tool written in Rust
 
 # Why **zc**
 
-- blazingly fast and a companion to the flagship [Zectonal](https://www.zectonal.com) **Data Observability and Deep Data Inspection Platform<sup>(c)</sup>**.
+- blazingly fast and a companion to the [Zectonal Data Observability and Deep Data Inspection Platform<sup>(c)</sup>](https://www.zectonal.com)
 
 - provides a quick snapshot for observability information about your data sources
 
-- perfect for iterating to generating an optimal [Configuration](#configuration) for the [Zectonal](https://www.zectonal.com) platform.
+- perfect for iterating to generating an optimal [Configuration](#configuration) for the [Zectonal](https://www.zectonal.com) platform
 
-- only runs in your environment. We believe that your data or observability metrics in someone else's SaaS platform or Cloud is for their benefit and not yours.
+- only runs in your environment
+
+> We believe that your data and observability metrics in someone else's SaaS platform or Cloud is for their benefit and not yours
 
 # Connect with Us
 
-Zectheads unite! We love to get new features and feedback.
+Zectheads Unite!
+
+Who Are You? Where Are You? What Do You Want?
 
 Email us at [support@zectonal.com](mailto:support@zectonal.com)
 
-Join a discussion on our `Zectonal` [Discord](https://www.discord.com) Server
+Join a discussion on our [Zectonal Discord Server](https://www.discord.com)
 
 View our [License](license.md)
 
@@ -61,7 +65,7 @@ unzip zc_0.14.0_macos.zip
 
 4. Run
 
-```
+```bash
 ./zc --configuration-file <your optional TOML config file>
 ```
 
