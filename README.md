@@ -249,9 +249,9 @@ zc --q
 zc --query-files
 ```
 
-> [!CAUTION]
+> **[!CAUTION]**
 >
-> - querying files can take a long time depending on the size and volumne of files
+> querying files can take a long time depending on the size and volumne of files
 
 ##### show active events
 
