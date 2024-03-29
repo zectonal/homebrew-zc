@@ -72,7 +72,9 @@ A **Configuration** is comprised of two items:
 1. [Environments](#environments)
 1. [Sources](#sources)
 
-> [!NOTE] >**zc** uses a TOML-formatted file for configuring data sources
+> [!NOTE]
+>
+> - zc uses a TOML-formatted file for configuring data sources
 
 ### Environments
 
