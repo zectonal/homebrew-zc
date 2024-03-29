@@ -2,11 +2,13 @@
 
 A blazingly fast Data Observability command line diagnostic tool written in Rust that runs in your environment.
 
+![](images/ZectonalLogo.jpg)
+
 # Why **zc**
 
-- blazingly fast and a companion to the flagship [Zectonal](https://www.zectonal.com) **Data Observability and Deep Data Inspection Platform**.
+- blazingly fast and a companion to the flagship [Zectonal](https://www.zectonal.com) **Data Observability and Deep Data Inspection Platform<sup>(c)</sup>**.
 
-- perfect for providing a quick snapshot for information about your data sources.
+- perfect for providing a quick snapshot for observability information about your data sources
 
 - perfect for iterating to generating an optimal [Configuration](#configuration) for the [Zectonal](https://www.zectonal.com) platform.
 
@@ -19,8 +21,6 @@ Zectheads unite! We love new features and feedback.
 Email us at [support@zectonal.com](mailto:support@zectonal.com)
 
 Join a discussion on our `Zectonal` [Discord](https://www.discord.com) Server
-
-![](images/ZectonalLogo.jpg)
 
 View our [License](license.md)
 
