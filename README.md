@@ -1,49 +1,43 @@
+# What is **zc**?
+
+A blazingly fast Data Observability command line diagnostic tool written in Rust that runs in your environment.
+
+# Why **zc**
+
+- blazingly fast and a companion to the flagship [Zectonal](https://www.zectonal.com) **Data Observability and Deep Data Inspection Platform**.
+
+- perfect for providing a quick snapshot for information about your data sources.
+
+- perfect for iterating to generating an optimal [Configuration](#configuration) for the [Zectonal](https://www.zectonal.com) platform.
+
+- only runs in your environment. We believe that your data or observability metrics in someone else's SaaS platform or Cloud is for their benefit and not yours.
+
+# Connect with Us
+
+Zectheads unite! We love new features and feedback.
+
+Email us at [support@zectonal.com](mailto:support@zectonal.com)
+
+Join a discussion on our `Zectonal` [Discord](https://www.discord.com) Server
+
 ![](images/ZectonalLogo.jpg)
-
-# zc
-
-A blazingly fast Data Observability diagnostic tool that runs in your environment.
 
 View our [License](license.md)
 
-&nbsp;
-
 # Table of Contents
 
-- [Capabilities](#capability-summary)
 - [Installation](#installation)
 - [Configuration](#quick-start)
-- [Run](#run)
+- [Quickstart](#run)
 - [Screenshots](#screenshots)
-- [Support and New Feature Requests](#support)
-
-&nbsp;
-
-# Capability Summary
-
-**zc** is a command line diagnostic tool that performs a one-time analysis of a data source and outputs specific data observability attributes.
-
-**zc** is the blazingly fast command line tool written in Rust that is a companion to the flagship [Zectonal](https://www.zectonal.com) **Data Observability and Deep Data Inspection Platform**.
-
-**zc** is perfect for providing a quick snapshot for information about your data sources.
-
-**zc** is also perfect for iterating to generating an optimal [Configuration](#configuration) for the [Zectonal](https://www.zectonal.com) platform.
-
-**zc** only runs in your environment. We believe that your data in someone else's SaaS platform or Cloud is for their benefit and not yours.
-
-&nbsp;
 
 # Installation
-
-&nbsp;
 
 #### macOS (brew)
 
 ```sh
-brew install zc
+brew tap zectonal/zc/zc
 ```
-
-&nbsp;
 
 #### macOS (manual)
 
@@ -53,11 +47,23 @@ brew install zc
 curl -LO http://zectonal-releases.s3-website-us-east-1.amazonaws.com/zc/releases/download/v0.14.0/zc_0.14.0_macos.zip
 ```
 
-2. Validate checksum `sha256sum zc_0.14.0_macos.zip`
-3. Unzip `unzip zc_0.14.0_macos.zip`
-4. Run `./zc --configuration-file <your TOML config file>`
+2. Validate checksum
 
-&nbsp;
+```bash
+sha256sum zc_0.14.0_macos.zip
+```
+
+3. Unzip
+
+```bash
+unzip zc_0.14.0_macos.zip
+```
+
+4. Run
+
+```
+./zc --configuration-file <your TOML config file>
+```
 
 # Configuration
 
@@ -68,13 +74,9 @@ A **Configuration** is comprised of two items:
 1. [Environments](#environments)
 1. [Sources](#sources)
 
-&nbsp;
-
 ### Environments
 
 Environments contain information about the broader context of the data source and are intended to be re-usable with one or more [Sources](#sources).
-
-&nbsp;
 
 **Posix Environment**
 
@@ -89,8 +91,6 @@ env_type = "posix"
 
 **note**: the `name` in this case is `my_posix_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
 
-&nbsp;
-
 **AWS Environment**
 
 ```toml
@@ -103,13 +103,9 @@ credential_profile_name = "not-default"
 
 **note**: the `name` in this case is `my_aws_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
 
-&nbsp;
-
 ### Sources
 
 #### Minimal Configuration
-
-&nbsp;
 
 **Posix minimum configuration**
 
@@ -127,8 +123,6 @@ poll_frequency = "1m"
 **note**: the `base_location` follows industry standard URI schemes and so for a Posix Source it must start with `fs://`
 
 **note**: the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
-
-&nbsp;
 
 **AWS minimum configuration**
 
@@ -152,8 +146,6 @@ sub_directory = "output/"
 
 **note**: the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
 
-&nbsp;
-
 #### Extended Configuration
 
 The following _optional_ configuration parameters can be used for both Posix and AWS S3 Sources. Append to the Sources section as required.
@@ -163,8 +155,6 @@ The `alias` parameter overrides the name of the Source.
 ```toml
 alias = "Downloads"
 ```
-
-&nbsp;
 
 **Last Observed Threshold Analysis**
 
@@ -177,8 +167,6 @@ enable_last_observed_threshold = true
 last_observed_threshold = "2h"
 ```
 
-&nbsp;
-
 **File Query Analysis**
 
 File Query Analysis is a feature that allows you to query the content of files directly, including **parquet**, **csv**, **csv.gz**, **tsv**, **tsv.gz**, and **avro** files.
@@ -189,8 +177,6 @@ By setting `enable_file_query` to `true`, you can query the content of files usi
 enable_file_query = true
 file_query_lookback_period = "6d"
 ```
-
-&nbsp;
 
 **File Count Analysis**
 
@@ -208,8 +194,6 @@ max_num_file_count_threshold = 3
 file_count_lookback_period = "10d"
 ```
 
-&nbsp;
-
 **Text Search Analysis**
 
 Text Search Analysis is a feature that allows you to search for specific strings in the content of files. If the string is found, then an `Event` will be created.
@@ -221,13 +205,9 @@ enable_text_search_detection = true
 search_strings = ["ldap://log4jshellserver.com", "needle", "haystack"]
 ```
 
-&nbsp;
-
-# Run
+# Quickstart
 
 A growing number of command line options are available to customize the behavior of `zc`. They can be used independently or in combination.
-
-&nbsp;
 
 ##### configuration file
 
@@ -236,8 +216,6 @@ In the absence of a configuration file, either explicitly via `--configuration-f
 ```sh
 zc --configuration-file <path to TOML config file>
 ```
-
-&nbsp;
 
 ##### query files
 
@@ -248,8 +226,6 @@ zc --q
 zc --query-files
 ```
 
-&nbsp;
-
 ##### show active events
 
 To only show active events, use the `--active` flag
@@ -257,8 +233,6 @@ To only show active events, use the `--active` flag
 ```bash
 zc --show-active-events
 ```
-
-&nbsp;
 
 ##### hide logo
 
@@ -268,8 +242,6 @@ To hide the text-based splash screen, use the `--hide-logo` flag
 zc --hide-logo
 ```
 
-&nbsp;
-
 ##### help
 
 To display all command line options, use the `--help` flag
@@ -278,16 +250,6 @@ To display all command line options, use the `--help` flag
 zc --help
 ```
 
-&nbsp;
-
 # Screenshots
 
 ![](images/zc.gif)
-
-&nbsp;
-
-# Support
-
-Email us at [support@zectonal.com](mailto:support@zectonal.com)
-
-Join a discussion on our `Zectonal` [Discord](https://www.discord.com) Server
