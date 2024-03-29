@@ -62,7 +62,7 @@ unzip zc_0.14.0_macos.zip
 4. Run
 
 ```
-./zc --configuration-file <your TOML config file>
+./zc --configuration-file <your optional TOML config file>
 ```
 
 # Configuration
@@ -74,7 +74,7 @@ A **Configuration** is comprised of two items:
 
 > [!NOTE]
 >
-> - zc uses a TOML-formatted file for configuring data sources
+> zc uses a TOML-formatted file for configuring data sources
 
 ### Environments
 
