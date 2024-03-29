@@ -88,10 +88,9 @@ env_type = "posix"
 ```
 
 > [!IMPORTANT]
-> the `env_type` must be `posix`
-
-> [!IMPORTANT]
-> the `name` in this case is `my_posix_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
+>
+> - the `env_type` must be `posix`
+> - the `name` in this case is `my_posix_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
 
 **AWS Environment**
 
