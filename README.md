@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ![](images/ZectonalLogo.jpg)
 
 # zc
