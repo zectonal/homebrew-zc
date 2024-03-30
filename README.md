@@ -249,13 +249,13 @@ zc --q
 zc --query-files
 ```
 
-> **[!CAUTION]**
+> [!CAUTION]
 >
-> querying files can take a long time depending on the size and volumne of files
+> querying files can take a long time depending on the size and volume of files
 
 ##### show active events
 
-To only show active events, use the `--active` flag
+To only show active events, use the `--show-active-events` flag
 
 ```bash
 zc --show-active-events
