@@ -14,7 +14,7 @@ A blazingly fast Data Observability command line diagnostic tool written in Rust
 
 - only runs in your environment
 
-> Data observability metrics in someone else's SaaS platform or Cloud is for their benefit and not yours
+Data observability metrics in someone else's SaaS platform or Cloud is for their benefit and not yours
 
 # Connect with Us
 
