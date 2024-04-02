@@ -20,7 +20,7 @@ A blazingly fast Data Observability command line diagnostic tool written in Rust
 
 Zectheads Unite!
 
-Who Are You? Where Are You? What Do You Want?
+Who Are You? Where Are You?
 
 Email us at [support@zectonal.com](mailto:support@zectonal.com)
 
@@ -85,9 +85,9 @@ A **Configuration** is comprised of two items:
 1. [Environments](#environments)
 1. [Sources](#sources)
 
-> [!NOTE]
->
+> [!Alert]
 > zc uses a TOML-formatted file for configuring data sources
+
 
 ### Environments
 
@@ -102,10 +102,11 @@ Environments contain information about the broader context of the data source an
 env_type = "posix"
 ```
 
-> [!IMPORTANT]
+> [!Note]
 >
 > - the `env_type` must be `posix`
 > - the `name` in this case is `my_posix_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
+
 
 **AWS Environment**
 
@@ -115,10 +116,11 @@ env_type = "aws"
 credential_profile_name = "not-default"
 ```
 
-> [!IMPORTANT]
+> [!Note]
 >
 > - the `env_type` must be `aws`
 > - the `name` in this case is `my_aws_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
+
 
 ### Sources
 
@@ -135,14 +137,15 @@ base_location = "fs:///Users/me/Downloads"
 poll_frequency = "1m"
 ```
 
-> [!NOTE]
->
-> the default name for this Source is `Downloads`
+> [!Warning]
+> the default name for this Source is `Downloads` based on TOML syntax
 
-> [!IMPORTANT]
+
+> [!Note]
 >
 > - the `base_location` follows industry standard URI schemes and so for a Posix Source it must start with `fs://`
 > - the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
+
 
 **AWS minimum configuration**
 
@@ -160,14 +163,15 @@ Further, the AWS confiuration supports an optional parameter called `sub_directo
 sub_directory = "output/"
 ```
 
-> [!NOTE]
->
-> the default name for this Source is `zect_test`
+> [!Warning]
+> the default name for this Source is `zect_test` based on TOML syntax
 
-> [!IMPORTANT]
+
+> [!Note]
 >
 > - the `base_location` for an AWS S3 Source must start with `s3://` URI scheme.
 > - the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
+
 
 #### Extended Configuration
 
@@ -249,9 +253,9 @@ zc --q
 zc --query-files
 ```
 
-> [!CAUTION]
->
+> [!Caution]
 > querying files can take a long time depending on the size and volume of files
+
 
 ##### show active events
 
