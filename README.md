@@ -85,7 +85,7 @@ A **Configuration** is comprised of two items:
 1. [Environments](#environments)
 1. [Sources](#sources)
 
-> [!Alert]
+> [!Tip]
 > zc uses a TOML-formatted file for configuring data sources
 
 
@@ -102,7 +102,7 @@ Environments contain information about the broader context of the data source an
 env_type = "posix"
 ```
 
-> [!Note]
+> [!Important]
 >
 > - the `env_type` must be `posix`
 > - the `name` in this case is `my_posix_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
@@ -116,7 +116,7 @@ env_type = "aws"
 credential_profile_name = "not-default"
 ```
 
-> [!Note]
+> [!Important]
 >
 > - the `env_type` must be `aws`
 > - the `name` in this case is `my_aws_env` and must match exactly the `env_name` variable found in the [Sources](#sources) section (see below)
@@ -141,7 +141,7 @@ poll_frequency = "1m"
 > the default name for this Source is `Downloads` based on TOML syntax
 
 
-> [!Note]
+> [!Important]
 >
 > - the `base_location` follows industry standard URI schemes and so for a Posix Source it must start with `fs://`
 > - the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
@@ -167,7 +167,7 @@ sub_directory = "output/"
 > the default name for this Source is `zect_test` based on TOML syntax
 
 
-> [!Note]
+> [!Important]
 >
 > - the `base_location` for an AWS S3 Source must start with `s3://` URI scheme.
 > - the `env_name` must match exactly the `name` found in the [Environments](#environments) section ([see above](#environments))
