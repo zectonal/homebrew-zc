@@ -137,7 +137,7 @@ base_location = "fs:///Users/me/Downloads"
 poll_frequency = "1m"
 ```
 
-> [!Warning]
+> [!Tip]
 > the default name for this Source is `Downloads` based on TOML syntax
 
 
@@ -163,7 +163,7 @@ Further, the AWS confiuration supports an optional parameter called `sub_directo
 sub_directory = "output/"
 ```
 
-> [!Warning]
+> [!Tip]
 > the default name for this Source is `zect_test` based on TOML syntax
 
 
